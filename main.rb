@@ -9,7 +9,7 @@ def main()
 		config.consumer_key=$consumer_key#API Key
 		config.consumer_secret=$consumer_secret#API secret
 		config.access_token=$access_token #Access token
-		0config.access_token_secret=$access_token_secret  #Access token secret
+		config.access_token_secret=$access_token_secret  #Access token secret
 	end
 	
 	client.update("test")
