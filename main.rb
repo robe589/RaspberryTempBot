@@ -21,15 +21,15 @@ def main()
 	temp.insert(2,".")
 	tempNum=temp.to_f
 	p tempNum
-	if tempNum<47 
-		return true
-	end
 	nowTime=Time.now
 	str=nowTime.strftime("%Y年%m月%d日%H時%M分の温度は")+temp+'度です'
 	csvdate=[nowTime.strftime("%m/%d/%H:%M"),temp]
 	#CSVファイルに温度データを保存
 	CSV.open(storagePath+csvName,'a') do |csv|
 		csv << csvdate
+	end
+	if tempNum<47 
+		return true
 	end
 	#ツイッターログイン処理
 	str=Time.now.strftime("%Y年%m月%d日%H時%M分の温度は")+temp+'度です'
